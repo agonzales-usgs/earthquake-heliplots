@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+pushd `dirname $0` > /dev/null 2>&1;
+
+configFile='../conf/config.ini';
+
+read -p 'Data Directory: ' DATA_DIR;
+
+cat <<-EO_CONFIG > $configFile
+DATA_DIR = $DATA_DIR
+DATA_URL = /heliplots/data
+EO_CONFIG

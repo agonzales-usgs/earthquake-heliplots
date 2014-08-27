@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+push `dirname $0` > /dev/null 2>&1;
+
+configFile='../conf/config.ini';
+
+# Remove httpd config file, but leave the config INI file in place
+rm -vf $configFile;
+
+popd > /dev/null 2>&1;
+
+exit 0;
